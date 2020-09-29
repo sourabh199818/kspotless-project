@@ -1,0 +1,1151 @@
+<?php
+$sendresponse=0;
+if (isset($_POST["submit"])) {
+$email = "ksspot17@gmail.com";
+$subject = "New meeting request";
+$fname="Sir";
+$name = $_POST["name"];
+$cemail = $_POST["email"];
+$phone = $_POST["phone"];
+$select = $_POST["select"];
+// prepare email body text
+$body = "";
+$body .= "Name: ";
+$body .= $name;
+$body .= "<br>";
+$body .= "Email: ";
+$body .= $cemail;
+$body .= "<br>";
+$body .= "Phone: ";
+$body .= $phone;
+$body .= "<br>";
+$body .= "Package: ";
+$body .= $select;
+$body .= "<br>";
+$body .= "Please Contact above details for confirmation..";
+
+// redirect to success page
+include('emailconfig.php');
+if ($sendresponse==1) {
+  echo "<script>alert('Thank you!!! soon we will get back to you')</script>";
+}else{
+    echo "<script>alert('Something went wrong ')</script>";
+
+}
+}
+if (isset($_POST["submit2"])) {
+$email = "ksspot17@gmail.com";
+$subject = "Someone tried to contact you!!!";
+$fname="Sir";
+$name = $_POST["cname"];
+$cemail = $_POST["cemail"];
+$cmessage = $_POST["cmessage"];
+// prepare email body text
+$body = "";
+$body .= "Name: ";
+$body .= $name;
+$body .= "<br>";
+$body .= "Email: ";
+$body .= $cemail;
+$body .= "<br>";
+$body .= "Message: ";
+$body .= $cmessage;
+
+$body .= "<br>";
+$body .= "Please Contact above details for more..";
+
+// redirect to success page
+include('emailconfig.php');
+if ($sendresponse==1) {
+  echo "<script>alert('Submitted')</script>";
+}else{
+    echo "<script>alert('Something went wrong ')</script>";
+
+}
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178526262-1"></script>
+ <script src="https://www.google.com/recaptcha/api.js"></script>
+
+  <script>
+   function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
+ </script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-178526262-1');
+</script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- SEO Meta Tags -->
+  <meta name="wgatsapp" content="">
+  <meta name="author" content="Inovatik">
+
+  <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+  <meta property="og:kspotless" content="" /> <!-- website name -->
+  <meta property="og:https://kspotless.com/index.php" content="" /> <!-- website link -->
+  <meta property="og: Professional Cleaning Services in Delhi, Gurgaon, Noida- Kspotless" content="" /> <!-- title shown in the actual shared post -->
+  <meta property="og:Spotless provides professional cleaning services in Gurgaon, Noida and Delhi NCR. We offer customized solutions & cleaning services to residences and commercial establishments in Gurgaon and NCR. Call at: 9818490257 " content="" /> <!-- description shown in the actual shared post -->
+  <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+  <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+  <meta property="og:type" content="article" />
+
+  <!-- Website Title -->
+  <title>Spotless</title>
+
+  <!-- Styles -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,700,700i&amp;subset=latin-ext" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/fontawesome-all.css" rel="stylesheet">
+  <link href="css/swiper.css" rel="stylesheet">
+  <link href="css/magnific-popup.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+
+  <!-- Favicon  -->
+  <link rel="icon" href="images/favicon.png">
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+
+  <!-- Preloader -->
+  <div class="spinner-wrapper">
+    <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+  </div>
+  <!-- end of preloader -->
+
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <!-- Text Logo - Use this if you don't have a graphic logo -->
+    <!-- <a class="navbar-brand logo-text page-scroll" href="index.php">Evolo</a> -->
+
+    <!-- Image Logo -->
+    <a class="navbar-brand logo-image" href="index.php"><img src="images/logo.png" alt="alternative"></a>
+
+    <!-- Mobile Menu Toggle Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-awesome fas fa-bars"></span>
+      <span class="navbar-toggler-awesome fas fa-times"></span>
+    </button>
+    <!-- end of mobile menu toggle button -->
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link page-scroll" href="#header">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link page-scroll" href="#services">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link page-scroll" href="#pricing">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link page-scroll" href="#request">Request</a>
+        </li>
+
+        <!-- Dropdown Menu
+                <li class="nav-item dropdown">
+                    <a class="nav-link file:///A:/Spotless%20project/project%20evolo%20-%20Copy/images/header-teamwork.svgdropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="terms-conditions.php"><span class="item-text">Terms Conditions</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="privacy-policy.php"><span class="item-text">Privacy Policy</span></a>
+                    </div>
+                </li>
+         end of dropdown menu -->
+
+        <li class="nav-item">
+          <a class="nav-link page-scroll" href="#contact">Contact</a>
+        </li>
+      </ul>
+      <!---  <span class="nav-item social-icons">
+                <span class="fa-stack">
+                    <a href="#your-link">
+                        <i class="fas fa-circle fa-stack-2x facebook"></i>
+                        <i class="fab fa-facebook-f fa-stack-1x"></i>
+                    </a>
+                </span>
+                <span class="fa-stack">
+                    <a href="#your-link">
+                        <i class="fas fa-circle fa-stack-2x twitter"></i>
+                        <i class="fab fa-twitter fa-stack-1x"></i>
+                    </a>---->
+      </span>
+      </span>
+    </div>
+  </nav> <!-- end of navbar -->
+  <!-- end of navigation -->
+
+
+  <!-- Header -->
+  <header id="header" class="header">
+    <div class="header-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="text-container">
+              <h1><span class="turquoise">K S Hospitality Services Pvt. Ltd.</span> SPOTLESS</h1>
+              <p class="p-large"><strong>Better Saaf then Sorry!!!</p></strong>
+              <a class="btn-solid-lg page-scroll" href="#services">Services</a>
+            </div> <!-- end of text-container -->
+          </div> <!-- end of col -->
+          <div class="col-lg-6">
+            <div class="image-container">
+              <img class="img-fluid" src="images/-background.jpg" alt="">
+            </div> <!-- end of image-container -->
+          </div> <!-- end of col -->
+        </div> <!-- end of row -->
+      </div> <!-- end of container -->
+    </div> <!-- end of header-content -->
+  </header> <!-- end of header -->
+  <!-- end of header -->
+
+
+  <!-- Customers -->
+  <!--  <div class="slider-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h5>Trusted By</h5>
+
+                    Image Slider -->
+  <!--  <div class="slider-container">
+                        <div class="swiper-container image-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="image-container">
+                                        <img class="img-responsive" src="images/customer-logo-1.png" alt="alternative">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="image-container">
+                                        <img class="img-responsive" src="images/customer-logo-2.png" alt="alternative">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="image-container">
+                                        <img class="img-responsive" src="images/customer-logo-3.png" alt="alternative">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="image-container">
+                                        <img class="img-responsive" src="images/customer-logo-4.png" alt="alternative">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="image-container">
+                                        <img class="img-responsive" src="images/customer-logo-5.png" alt="alternative">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="image-container">
+                                        <img class="img-responsive" src="images/customer-logo-6.png" alt="alternative">
+                                    </div>
+                                </div>
+                            </div>  end of swiper-wrapper -->
+  </div> <!-- end of swiper container -->
+  </div> <!-- end of slider-container -->
+  <!-- end of image slider -->
+
+  </div> <!-- end of col -->
+  </div> <!-- end of row -->
+  </div> <!-- end of container -->
+  </div> <!-- end of slider-1 -->
+  <!-- end of customers -->
+
+
+  <!-- Services -->
+  <div id="services" class="cards-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2> Cleaning Services</h2>
+          <p class="p-heading p-large">Spotless provide Home Deep Cleaning, House Keeping Services, Facility Management, Kitchen Cleaning, Washroom Cleaning, Room Cleaning, Marble Polishing, Carpet Cleaning, Floor Cleaning, Sofa Cleaning, Chair
+            Cleaning, Office Deep Cleaning, Deep Cleaning. Our team uses high grade cleaning products and tools to deeply clean environments for optimal results
+          </p>
+        </div> <!-- end of col -->
+      </div> <!-- end of row -->
+      <div class="row">
+        <div class="col-lg-12">
+
+          <!-- Card -->
+          <div class="card">
+            <img class="card-image" src="images/services-icon-1.jpg" alt="">
+            <div class="card-body">
+              <h4 class="card-title"> Home Cleaning Service</h4>
+              <p>The process of house cleaning in OKC ranges from different levels of light cleaning to deep cleaning.</p>
+            </div>
+          </div>
+          <!-- end of card -->
+
+          <!-- Card -->
+          <div class="card">
+            <img class="card-image" src="images/services-icon-2.jpg" alt="alternative">
+            <div class="card-body">
+              <h4 class="card-title">Office Cleaning Services</h4>
+              <p>Keep your beauty salon or spa sparkling clean with a custom cleaning schedule from JAN-PRO. Contact us today for the best in salon cleaning services!</p>
+            </div>
+          </div>
+          <!-- end of card -->
+
+          <!-- Card -->
+          <div class="card">
+            <img class="card-image" src="images/services-icon-3.jpg" alt="alternative">
+            <div class="card-body">
+              <h4 class="card-title">Salon Cleaning Service</h4>
+              <p>An office cleaning service allows you to keep your space neat and sanitary. </p>
+            </div>
+          </div>
+          <!-- end of card -->
+
+        </div> <!-- end of col -->
+      </div> <!-- end of row -->
+    </div> <!-- end of container -->
+  </div> <!-- end of cards-1 -->
+  <!-- end of services -->
+
+
+  <!-- Details 1 -->
+  <div class="basic-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="text-container">
+            <h2>Why you need House Cleaning</h2>
+            <p>A clean home is like heaven and it is always welcoming to come to a clean house. It takes a lot of effort to maintain and keep your house clean but it has its own advantages and perks. If you clean regularly and effectively, your house
+              as it will always look as good as new</p>
+            <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-1">Brief</a>
+          </div> <!-- end of text-container -->
+        </div> <!-- end of col -->
+        <div class="col-lg-6">
+          <div class="image-container">
+            <img class="img-fluid" src="images/details-1-office-worker.jpg" alt="alternative">
+          </div> <!-- end of image-container -->
+        </div> <!-- end of col -->
+      </div> <!-- end of row -->
+    </div> <!-- end of container -->
+  </div> <!-- end of basic-1 -->
+  <!-- end of details 1 -->
+
+
+  <!-- Details 2 -->
+  <div class="basic-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="image-container">
+            <img class="img-fluid" src="images/details-2-office-team-work.jpg" alt="alternative">
+          </div> <!-- end of image-container -->
+        </div> <!-- end of col -->
+        <div class="col-lg-6">
+          <div class="text-container">
+            <h2>Why you need Salon Cleaning</h2>
+            <ul class="list-unstyled li-space-lg">
+              <li class="media">
+                <div class="media-body">Hair salon cleaning is something that might seem simple to the general public, but if you’re running a business, you already know that cleaning a hair salon isn’t just about sweeping up the hair on the floor.
+                </div>
+              </li>
+              <li class="media">
+                <div class="media-body"> </div>
+              </li>
+              <li class="media">
+                <div class="media-body"></div>
+              </li>
+            </ul>
+            <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-2">Brief</a>
+          </div> <!-- end of text-container -->
+        </div> <!-- end of col -->
+      </div> <!-- end of row -->
+    </div> <!-- end of container -->
+  </div> <!-- end of basic-2 -->
+  <!-- end of details 2 -->
+  <!-- Details 2 -->
+  <!-- Details 1 -->
+  <div class="basic-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="text-container">
+            <h2>Why you need Office Cleaning</h2>
+            <p>A clean work place is like heaven and it is always welcoming to come to a clean office. It takes a lot of effort to maintain and keep your office clean but it has its own advantages and perks. If you clean regularly and effectively,
+              your office as it will always look as good as new</p>
+            <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-3">Brief</a>
+          </div> <!-- end of text-container -->
+        </div> <!-- end of col -->
+        <div class="col-lg-6">
+          <div class="image-container">
+            <img class="img-fluid" src="images/deep cleaning.jpg" alt="alternative">
+          </div> <!-- end of image-container -->
+        </div> <!-- end of col -->
+      </div> <!-- end of row -->
+    </div> <!-- end of container -->
+  </div> <!-- end of basic-1 -->
+  <!-- end of details 1 -->
+
+  <!-- Details Lightboxes -->
+  <!-- Details Lightbox 1 -->
+  <div id="details-lightbox-1" class="lightbox-basic zoom-anim-dialog mfp-hide">
+    <div class="container">
+      <div class="row">
+        <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+        <div class="col-lg-8">
+          <div class="image-container">
+            <img class="img-fluid" src="images/details-lightbox-1.jpg" alt="alternative">
+          </div> <!-- end of image-container -->
+        </div> <!-- end of col -->
+        <div class="col-lg-4">
+          <h3>Why deep House Cleaning? </h3>
+          <hr>
+          <h5></h5>
+          <p>With an increasingly hectic lifestyle, more and more people are realising that they do not have the luxury of time that the earlier generations had. Life is always on the run, and mundane everyday matters are being relegated to the
+            background for lack of time and energy. Tasks such as home deep cleaning every day is now becoming cleaning the house every weekend.</p>
+          <p>Breif guide what we provide</p>
+          <ul class="list-unstyled li-space-lg">
+            <li class="media">
+              <i class="fas fa-check"></i>
+              <div class="media-body">Vacuuming floors</div>
+            </li>
+            <li class="media">
+              <i class="fas fa-check"></i>
+              <div class="media-body">Organizing the house</div>
+            </li>
+            <li class="media">
+              <i class="fas fa-check"></i>
+              <div class="media-body">Disinfecting and cleaning the bathroom including sinks, toilets, bathtub, mirror etc.
+
+              </div>
+            </li>
+            <li class="media">
+              <i class="fas fa-check"></i>
+              <div class="media-body">Kitchen cleaning including surface cleaning, appliance cleaning, trash removal.</div>
+            </li>
+            <li class="media">
+              <i class="fas fa-check"></i>
+              <div class="media-body">Clean window frames and patio doors</div>
+            </li>
+            <li class="media">
+              <i class="fas fa-check"></i>
+              <div class="media-body">Dust baseboards and doors carefully all over the home.</div>
+            </li>
+          </ul>
+          <a class="btn-solid-reg mfp-close page-scroll" href="#request">REQUEST</a> <a class="btn-outline-reg mfp-close as-button" href="#screenshots">BACK</a>
+        </div> <!-- end of col -->
+      </div> <!-- end of row -->
+    </div> <!-- end of container -->
+  </div> <!-- end of lightbox-basic -->
+  <!-- end of details lightbox 1 -->
+
+  <!-- Details Lightbox 2 -->
+  <div id="details-lightbox-2" class="lightbox-basic zoom-anim-dialog mfp-hide">
+    <div class="container">
+      <div class="row">
+        <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+        <div class="col-lg-8">
+          <div class="image-container">
+            <img class="img-fluid" src="images/details-lightbox-2.jpg" alt="alternative">
+          </div> <!-- end of image-container -->
+        </div> <!-- end of col -->
+        <div class="col-lg-4">
+          <h3>Why deep Salon Cleaning?</h3>
+          <hr>
+          <h5></h5>
+          <p>As a salon or spa owner, you know that attention to detail is of paramount importance for winning customers over and keeping them. Every single element counts when it comes to ensuring the satisfaction of your clients. Perfect
+            cleanliness is one of the most important prerequisites for maintaining the salon’s excellent reputation.</p>
+          <p></p>
+          <ul class="list-unstyled li-space-lg">
+            <li class="media">
+              <i class="fas fa-check"></i>
+              <div class="media-body">Sanitization of high-touch contact areas (massage tables, salon chairs, door handles, light switches)</div>
+            </li>
+            <li class="media">
+              <i class="fas fa-check"></i>
+              <div class="media-body">Water Extraction</div>
+            </li>
+            <li class="media">
+              <i class="fas fa-check"></i>
+              <div class="media-body">Multi-use tools and items cleaning</div>
+            </li>
+            <li class="media">
+              <i class="fas fa-check"></i>
+              <div class="media-body">Receptionist desk cleaning</div>
+            </li>
+            <li class="media">
+              <i class="fas fa-check"></i>
+              <div class="media-body">Carpet Cleaning</div>
+            </li>
+            <li class="media">
+              <i class="fas fa-check"></i>
+              <div class="media-body">Clear Glass Translucent Panel Cleaning</div>
+            </li>
+          </ul>
+          <a class="btn-solid-reg mfp-close page-scroll" href="#request">REQUEST</a> <a class="btn-outline-reg mfp-close as-button" href="#screenshots">BACK</a>
+        </div> <!-- end of col -->
+      </div> <!-- end of row -->
+    </div> <!-- end of container -->
+  </div> <!-- end of lightbox-basic -->
+  <!-- end of details lightbox 2 -->
+  <!-- end of details lightboxes -->
+
+  <div id="details-lightbox-3" class="lightbox-basic zoom-anim-dialog mfp-hide">
+    <div class="container">
+      <div class="row">
+        <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+        <div class="col-lg-8">
+          <div class="image-container">
+            <img class="img-fluid" src="images/details-lightbox-1.jpg" alt="alternative">
+          </div> <!-- end of image-container -->
+        </div> <!-- end of col -->
+        <div class="col-lg-4">
+          <h3>Why deep Office Cleaning? </h3>
+          <hr>
+          <h5></h5>
+          <p>With an increasingly hectic lifestyle, more and more people are realising that they do not have the luxury of time that the earlier generations had. Life is always on the run, and mundane everyday matters are being relegated to the
+            background for lack of time and energy. Tasks such as home deep cleaning every day is now becoming cleaning the house every weekend.</p>
+          <p>Breif guide what we provide</p>
+          <ul class="list-unstyled li-space-lg">
+            <li class="media">
+              <i class="fas fa-check"></i>
+              <div class="media-body">Vacuuming floors</div>
+            </li>
+            <li class="media">
+              <i class="fas fa-check"></i>
+              <div class="media-body">Organizing the Office</div>
+            </li>
+            <li class="media">
+              <i class="fas fa-check"></i>
+              <div class="media-body">Disinfecting and cleaning the bathroom including tables, chairs , each cabin
+
+              </div>
+            </li>
+            <li class="media">
+              <i class="fas fa-check"></i>
+              <div class="media-body"></div>
+            </li>
+            <li class="media">
+              <i class="fas fa-check"></i>
+              <div class="media-body">Clean Every window frames and patio doors</div>
+            </li>
+            <li class="media">
+              <i class="fas fa-check"></i>
+              <div class="media-body"></div>
+            </li>
+          </ul>
+          <a class="btn-solid-reg mfp-close page-scroll" href="#request">REQUEST</a> <a class="btn-outline-reg mfp-close as-button" href="#screenshots">BACK</a>
+        </div> <!-- end of col -->
+      </div> <!-- end of row -->
+    </div> <!-- end of container -->
+  </div> <!-- end of lightbox-basic -->
+  <!-- end of details lightbox
+
+
+     Pricing -->
+  <div id="pricing" class="cards-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Cheapest Pricing</h2>
+          <p class="p-heading p-large">We've prepared pricing plans for all budgets so you can get started right away.</p>
+        </div> <!-- end of col -->
+      </div> <!-- end of row -->
+      <div class="row">
+        <div class="col-lg-12">
+
+          <!-- Card-->
+          <div class="card">
+            <div class="card-body">
+              <div class="card-title">House Cleaning</div>
+              <div class="card-subtitle"> House Service Pack includes: </div>
+              <hr class="cell-divide-hr">
+              <div class="price">
+                <span class="currency">Starting Price</span><span class="value">₹3200</span>
+                <div class="frequency"><strong><del>₹6400</del></strong></div>
+              </div>
+              <hr class="cell-divide-hr">
+              <ul class="list-unstyled li-space-lg">
+                <li class="media">
+                  <i class="fas fa-check"></i>
+                  <div class="media-body">Floor Buffing every types of Floor Using Industry Grade Machines</div>
+                </li>
+                <li class="media">
+                  <i class="fas fa-check"></i>
+                  <div class="media-body">Cleaning of all doors and windows</div>
+                </li>
+                <li class="media">
+                  <i class="fas fa-check"></i>
+                  <div class="media-body">Includes bathroom and kitchen deep cleaning</div>
+                </li>
+                <li class="media">
+                  <i class="fas fa-check"></i>
+                  <div class="media-body">Mirror and Glasses</div>
+                </li>
+                <li class="media">
+                  <i class="fas fa-check"></i>
+                  <div class="media-body">Includes hard to reach areas such as balcony, fans, etc</div>
+                </li>
+
+              </ul>
+              <div class="button-wrapper">
+                <a class="btn-solid-reg page-scroll" href="#request">REQUEST</a>
+              </div>
+            </div>
+          </div> <!-- end of card -->
+          <!-- end of card -->
+
+          <!-- Card-->
+          <div class="card">
+            <div class="card-body">
+              <div class="card-title">Salon Cleaning </div>
+              <div class="card-subtitle">Salon Service Pack includes:</div>
+              <hr class="cell-divide-hr">
+              <div class="price">
+                <span class="currency">Starting Price</span><span class="value">₹5 sqft</span>
+                <div class="frequency"><del>₹8 Per sqaurefeet</del></div>
+              </div>
+              <hr class="cell-divide-hr">
+              <ul class="list-unstyled li-space-lg">
+                <li class="media">
+                  <i class="fas fa-check"></i>
+                  <div class="media-body">Every window and door</div>
+                </li>
+                <li class="media">
+                  <i class="fas fa-check"></i>
+                  <div class="media-body">Height Dusting</div>
+                </li>
+                <li class="media">
+                  <i class="fas fa-check"></i>
+                  <div class="media-body"> Chair Shampoo</div>
+                </li>
+                <li class="media">
+                  <i class="fas fa-check"></i>
+                  <div class="media-body">Mirror Glass</div>
+                </li>
+                <li class="media">
+                  <i class="fas fa-check"></i>
+                  <div class="media-body">Pedicure and Floor Buffing</div>
+                </li>
+                <li class="media">
+                  <i class="fas fa-check"></i>
+                  <div class="media-body">And much more</div>
+                </li>
+              </ul>
+              <div class="button-wrapper">
+                <a class="btn-solid-reg page-scroll" href="#request">REQUEST</a>
+              </div>
+            </div>
+          </div> <!-- end of card -->
+          <!-- end of card -->
+
+
+          <div class="card">
+            <div class="label">
+              <p class="best-value">Best of all </p>
+              <div class="card-subtitle"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-title">Office Cleaning </div>
+              <div class="card-subtitle">Office Service Pack includes:</div>
+              <hr class="cell-divide-hr">
+              <div class="price">
+
+                <span class="currency">Starting Price</span><span class="value">₹5 sqft</span>
+                <div class="frequency"><strong><del>₹10 Per sqaurefeet</del></strong></div>
+              </div>
+              <hr class="cell-divide-hr">
+              <ul class="list-unstyled li-space-lg">
+                <li class="media">
+                  <i class="fas fa-check"></i>
+                  <div class="media-body">Chair and Table Cleaning</div>
+                </li>
+                <li class="media">
+                  <i class="fas fa-check"></i>
+                  <div class="media-body">Lift, Window And door Cleaning</div>
+                </li>
+                <li class="media">
+                  <i class="fas fa-check"></i>
+                  <div class="media-body">Mirror Glass</div>
+                </li>
+                <li class="media">
+                  <i class="fas fa-check"></i>
+                  <div class="media-body">Carpet Shampoo</div>
+                </li>
+                <li class="media">
+                  <i class="fas fa-check"></i>
+                  <div class="media-body">Much More.....</div>
+                </li>
+              </ul>
+              <div class="button-wrapper">
+                <a class="btn-solid-reg page-scroll" href="#request">REQUEST</a>
+              </div>
+            </div>
+          </div> <!-- end of card -->
+          <!-- end of card -->
+
+        </div> <!-- end of col -->
+      </div> <!-- end of row -->
+    </div> <!-- end of container -->
+  </div> <!-- end of cards-2 -->
+  <!-- end of pricing -->
+
+
+  <!-- Request -->
+  <div id="request" class="form-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="text-container">
+            <h2>Fill The Following Form To Request A Cleaning Service</h2>
+            <p>Spotless is one of the Leading Experience Cleaning Service Brand in Delhi-NCR.</p>
+            <!--   <ul class="list-unstyled li-space-lg">
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body"><strong class="blue">Automate your marketing</strong> activities and get results today</div>
+                            </li><iframe width="560" height="315" src="https://www.youtube.com/embed/NOE6Y-3pBaM?start=8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body"><strong class="blue">Interact with all your</strong> targeted customers at a personal level</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body"><strong class="blue">Convince them to buy</strong> your company's awesome products</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body"><strong class="blue">Save precious time</strong> and invest it where you need it the most</div>
+                            </li>
+                        </ul>--->
+          </div>
+        </div> <!-- end of col -->
+        <div class="col-lg-6">
+            <!-- Request Form -->
+            <form method="post" >
+            <div class="form-container">
+                <div class="form-group">
+                  <input type="text" class="form-control-input" id="rname" name="name" required>
+                  <label class="label-control" for="rname">Full name</label>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control-input" id="remail" name="email" required>
+                  <label class="label-control" for="remail">Email</label>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group">
+                  <input type="text" pattern="[789][0-9]{9}" title="please enter valid phone number" class="form-control-input" id="rphone" name="phone"  required>
+                  <label class="label-control" for="rphone">Phone</label>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group">
+                  <select class="form-control-select" id="select" name="select" required>
+                    <option class="select-option" value="" disabled selected>Interested in...</option>
+                    <option class="select-option" value="House Cleaning">House Cleaning</option>
+                    <option class="select-option" value="Office Cleaning">Office Cleaning</option>
+                    <option class="select-option" value="Salon Cleaning">Salon Cleaning</option>
+                  </select>
+                  <div class="help-block with-errors"></div>
+                </div>
+      
+            <div class="form-group">
+              <button type="submit" class="form-control-submit-button" name="submit">REQUEST</button>
+            </div>
+            <div class="form-message">
+              <div id="rmsgSubmit" class="h3 text-center hidden"></div>
+            </div>
+          </form>
+        </div>
+        <!-- end of form-container
+                     end of request form -->
+
+      </div> <!-- end of col -->
+    </div> <!-- end of row -->
+  </div> <!-- end of container -->
+  </div> <!-- end of form-1 -->
+  <!-- end of request -->
+
+
+  <!-- Video -->
+  <div class="basic-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Check Out The Video</h2>
+        </div> <!-- end of col -->
+      </div> <!-- end of row -->
+      <div class="row">
+        <div class="col-lg-12">
+
+          <!-- Video Preview -->
+          <div class="video-wrapper">
+            <a class="popup-youtube" href="https://www.youtube.com/watch?v=CoZ06etdrwo" data-effect="fadeIn">
+              <img class="img-fluid" src="images/video-frame.svg" alt="alternative">
+              <span class="video-play-button">
+                <span></span>
+              </span>
+            </a>
+          </div>
+          <!-- end of video-wrapper<iframe width="560" height="315" src="https://www.youtube.com/embed/NOE6Y-3pBaM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        </div> <!-- end of image-container -->
+        <!-- end of video preview -->
+
+        <p>This video will show you how we work at one of our <strong>Cilents</strong> and will help you understand why your Place need Spotless Service.</p>
+      </div> <!-- end of col -->
+    </div> <!-- end of row -->
+  </div> <!-- end of container -->
+  </div> <!-- end of basic-3 -->
+  <!-- end of video -->
+
+
+  <!-- Testimonials -->
+  <div class="slider-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="image-container">
+            <img class="img-fluid" src="images/testimonials-2-png" alt="">
+          </div> <!-- end of image-container -->
+        </div> <!-- end of col -->
+        <div class="col-lg-6">
+          <h2>Testimonials</h2>
+
+          <!-- Card Slider -->
+          <div class="slider-container">
+            <div class="swiper-container card-slider">
+              <div class="swiper-wrapper">
+
+                <!-- Slide -->
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img class="card-image" src="images/testimonial-1.svg" alt="alternative">
+                    <div class="card-body">
+                      <p class="testimonial-text">A very responsive team, worked extremely well. A very polite and well behaved crew</p>
+                      <p class="testimonial-author">Akhilesh Verma - Noida</p>
+                    </div>
+                  </div>
+                </div> <!-- end of swiper-slide -->
+                <!-- end of slide -->
+
+                <!-- Slide -->
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img class="card-image" src="images/testimonial-2.svg" alt="alternative">
+                    <div class="card-body">
+                      <p class="testimonial-text">The whole team especially the supervisors are extremely humble and had very cool headed. Never felt annoyed and always ready to attend to reccomendations with a smiling face. I am very happy with
+                        whole team and especially the supervisors. </p>
+                      <p class="testimonial-author">Sailesh - Gurgaon</p>
+                    </div>
+                  </div>
+                </div> <!-- end of swiper-slide -->
+                <!-- end of slide -->
+
+                <!-- Slide -->
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img class="card-image" src="images/testimonial-3.svg" alt="alternative">
+                    <div class="card-body">
+                      <p class="testimonial-text">Highly efficient team and Humble staff. Very helpful and understanding.</p>
+                      <p class="testimonial-author"> Looks Salon </p>
+                    </div>
+                  </div>
+                </div> <!-- end of swiper-slide -->
+                <!-- end of slide -->
+
+              </div> <!-- end of swiper-wrapper -->
+
+              <!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <!-- end of add arrows -->
+
+
+            </div> <!-- end of swiper-container -->
+          </div> <!-- end of slider-container -->
+          <!-- end of card slider -->
+
+        </div> <!-- end of col -->
+      </div> <!-- end of row -->
+    </div> <!-- end of container -->
+  </div> <!-- end of slider-2 -->
+  <!-- end of testimonials -->
+
+
+  <!-- About -->
+  <div id="about" class="basic-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>About The Team</h2>
+          <p class="p-heading p-large">We are a team of dedicated and professionally trained housekeepers accompanied by supervisor that will perform the cleaning magic in your respective salon.</p>
+        </div> <!-- end of col -->
+      </div> <!-- end of row -->
+      <div class="row">
+        <div class="col-lg-12">
+
+          <!-- Team Member -->
+          <div class="team-member">
+            <div class="image-wrapper">
+              <img class="img-fluid" src="images/team-member-2.svg" alt="alternative">
+            </div> <!-- end of image-wrapper -->
+            <p class="p-large"><strong>Kamal Singh Bisht</strong></p>
+            <p class="job-title">Director</p>
+            <span class="social-icons">
+              <span class="fa-stack">
+                <a href="#your-link">
+                  <i class="fas fa-circle fa-stack-2x facebook"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x"></i>
+                </a>
+              </span>
+              <!--  <span class="fa-stack">
+                                <a href="#your-link">
+                                    <i class="fas fa-circle fa-stack-2x twitter"></i>
+                                    <i class="fab fa-twitter fa-stack-1x"></i>
+                                </a>
+                            </span>
+                        </span>  end of social-icons -->
+          </div> <!-- end of team-member -->
+          <!-- end of team member -->
+
+          <!-- Team Member
+                    <div class="team-member">
+                        <div class="image-wrapper">
+                            <img class="img-fluid" src="images/team-member-2.svg" alt="alternative">
+                        </div> end of image wrapper
+                        <p class="p-large"><strong>Chris Brown</strong></p>
+                        <p class="job-title">Online Marketer</p>
+                        <span class="social-icons">
+                            <span class="fa-stack">
+                                <a href="#your-link">
+                                    <i class="fas fa-circle fa-stack-2x facebook"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x"></i>
+                                </a>
+                            </span>
+                            <span class="fa-stack">
+                                <a href="#your-link">
+                                    <i class="fas fa-circle fa-stack-2x twitter"></i>
+                                    <i class="fab fa-twitter fa-stack-1x"></i>
+                                </a>
+                            </span>
+                        </span>  end of social-icons -->
+        </div> <!-- end of team-member -->
+        <!-- end of team member -->
+
+        <!-- Team Member
+                    <div class="team-member">
+                        <div class="image-wrapper">
+                            <img class="img-fluid" src="images/team-member-3.svg" alt="alternative">
+                        </div>  end of image wrapper
+                        <p class="p-large"><strong>Sheila Zimerman</strong></p>
+                        <p class="job-title">Software Engineer</p>
+                        <span class="social-icons">
+                            <span class="fa-stack">
+                                <a href="#your-link">
+                                    <i class="fas fa-circle fa-stack-2x facebook"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x"></i>
+                                </a>
+                            </span>
+                            <span class="fa-stack">
+                                <a href="#your-link">
+                                    <i class="fas fa-circle fa-stack-2x twitter"></i>
+                                    <i class="fab fa-twitter fa-stack-1x"></i>
+                                </a>
+                            </span>
+                        </span>  end of social-icons -->
+      </div> <!-- end of team-member -->
+      <!-- end of team member -->
+
+      <!-- Team Member -->
+      <!---     <div class="team-member">
+                        <div class="image-wrapper">
+                            <img class="img-fluid" src="images/team-member-4.svg" alt="alternative">
+                        </div>  end of image wrapper -->
+      <!---   <p class="p-large"><strong>Mary Villalonga</strong></p>
+                        <p class="job-title">Product Manager</p>
+                        <span class="social-icons">
+                            <span class="fa-stack">
+                                <a href="#your-link">
+                                    <i class="fas fa-circle fa-stack-2x facebook"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x"></i>
+                                </a>
+                            </span>
+                            <span class="fa-stack">
+                                <a href="#your-link">
+                                    <i class="fas fa-circle fa-stack-2x twitter"></i>
+                                    <i class="fab fa-twitter fa-stack-1x"></i>
+                                </a>---->
+      </span>
+      </span> <!-- end of social-icons -->
+    </div> <!-- end of team-member -->
+    <!-- end of team member -->
+
+  </div> <!-- end of col -->
+  </div> <!-- end of row -->
+  </div> <!-- end of container -->
+  </div> <!-- end of basic-4 -->
+  <!-- end of about -->
+
+
+  <!-- Contact -->
+  <div id="contact" class="form-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Contact Information</h2>
+          <ul class="list-unstyled li-space-lg">
+            <li class="address">Don't hesitate to give us a call or send us a contact form message</li>
+            <li><i class="fas fa-map-marker-alt"></i>423, 4th floor squares one mall,Saket District Centre, Delhi</li>
+            <li><i class="fas fa-phone"></i><a class="turquoise" href="tel:+91 9818490257">+91 9818490257</a></li>
+            <li><i class="fas fa-envelope"></i><a class="turquoise" href="ksspot17@gmail.com">ksspot17@gmail.com</a></li>
+          </ul>
+        </div> <!-- end of col -->
+      </div> <!-- end of row -->
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="map-responsive">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d876.3467592934943!2d77.2176937270287!3d28.528084182459175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd5eac4572d07eae0!2sKS%20hospitality%20services%20pvt%20ltd!5e0!3m2!1sen!2sin!4v1600355259245!5m2!1sen!2sin"
+              width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+        </div> <!-- end of col -->
+        <div class="col-lg-6">
+
+          <!-- Contact Form -->
+          <form method="post">
+            <div class="form-group">
+              <input type="text" class="form-control-input" name="cname" required>
+              <label class="label-control" for="cname">Name</label>
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control-input" name="cemail" required>
+              <label class="label-control" for="cemail">Email</label>
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control-textarea" name="cmessage" required></textarea>
+              <label class="label-control" for="cmessage">Your message</label>
+              <div class="help-block with-errors"></div>
+            </div>
+         
+            <div class="form-group">
+              <button type="submit" class="form-control-submit-button" name="submit2">SUBMIT MESSAGE</button>
+            </div>
+            <div class="form-message">
+              <div id="cmsgSubmit" class="h3 text-center hidden"></div>
+            </div>
+          </form>
+          <!-- end of contact form -->
+
+        </div> <!-- end of col -->
+      </div> <!-- end of row -->
+    </div> <!-- end of container -->
+  </div> <!-- end of form-2 -->
+  <!-- end of contact -->
+
+
+  <!-- Footer
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-col">
+                        <h4>About Evolo</h4>
+                        <p>We're passionate about offering Best Deep Cleaning in the Town</p>
+                    </div>
+                </div> end of col
+                <div class="col-md-4">
+                    <div class="footer-col middle">
+                        <h4>Important Links</h4>
+                        <ul class="list-unstyled li-space-lg">
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Our business partners <a class="turquoise" href="#your-link">startupguide.com</a></div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Read our <a class="turquoise" href="terms-conditions.php">Terms & Conditions</a>, <a class="turquoise" href="privacy-policy.php">Privacy Policy</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>  end of col
+                <div class="col-md-4">
+                    <div class="footer-col last">
+                        <h4>Social Media</h4>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-google-plus-g fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-instagram fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin-in fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>  end of col -->
+  </div> <!-- end of row -->
+  </div> <!-- end of container -->
+  </div> <!-- end of footer -->
+  <!-- end of footer -->
+
+
+  <!-- Copyright -->
+  <div class="copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+        </div> <!-- end of col -->
+      </div> <!-- enf of row -->
+    </div> <!-- end of container -->
+  </div> <!-- end of copyright -->
+  <!-- end of copyright -->
+
+
+  <!-- Scripts -->
+  <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+  <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+  <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+  <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+  <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+  <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+  <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+  <script src="js/scripts.js"></script> <!-- Custom scripts -->
+</body>
+
+</html>
